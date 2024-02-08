@@ -1,0 +1,93 @@
+name = "microshift-kiosk"
+description = "Red Hat Device Edge - Kiosk - MicroShift"
+version = "1.1.0"
+modules = []
+groups = []
+distro = ""
+
+[[packages]]
+name = "microshift"
+
+[[packages]]
+name = "openssh"
+
+[[packages]]
+name = "openssh-server"
+
+[[packages]]
+name = "qemu-guest-agent"
+
+[[packages]]
+name = "@GNOME"
+
+[[packages]]
+name = "@base-x"
+
+[[packages]]
+name = "@Fonts"
+
+[[packages]]
+name = "@Common NetworkManager submodules"
+
+[[packages]]
+name = "@Container Management"
+
+[[packages]]
+name = "@Core"
+
+[[packages]]
+name = "@Guest Desktop Agents"
+
+[[packages]]
+name = "@Hardware Monitoring Utilities"
+
+[[packages]]
+name = "@Hardware Support"
+
+[[packages]]
+name = "@Headless Management"
+
+[[packages]]
+name = "@Internet Browser"
+
+[[packages]]
+name = "@Multimedia"
+
+[[packages]]
+name = "@Printing Client"
+
+[[packages]]
+name = "@Server product core"
+
+[[packages]]
+name = "@Standard"
+
+[customizations]
+
+[[customizations.sshkey]]
+user = "root"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC+piUqnS+envGehwphv9JORF1R/YJ46cJEK7GtZjumK"
+
+[[customizations.user]]
+name = "ansible"
+password = "$6$QECLMhjqTFVV09Fd$95AnKfO2MNl.yMqtScIC6pWVLp8GOLhBFoGCvdoWEuN4EyWrUTQE5CINMjLf/UL3SSRY3B1WXMdwAZeoQPQ8t1"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBP1ogAWldWtDgmJD/1GspAFj794HE2eHrP89Gqabju/"
+groups = ["wheel"]
+
+[[customizations.user]]
+name = "kiosk-user"
+password = "$6$vEKj4GRk3QQH6uVO$90vZFnFwFT94Qq9Wyzz8Jmxkpvyu1mH.UTAPEOGU8NtW1df5vXZrSCH.Zbe4H50qUS9M81I734hmHbbuI8kZr."
+key = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM1A5c2iOyclhxojf+3yXsjOSmIY91EyBFaHUGldv9UbwEfrV+R7MurdOsWlVyunNLpIwwbYONNfDYn4uHDneX4= project1989-kiosk.dev.lab.local"
+
+[customizations.timezone]
+timezone = "Etc/UTC"
+
+[customizations.locale]
+
+[customizations.firewall]
+
+[customizations.firewall.services]
+enabled = ["ssh"]
+
+[customizations.services]
+enabled = ["microshift", "sshd"]
