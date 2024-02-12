@@ -27,40 +27,7 @@ name = "@base-x"
 name = "@Fonts"
 
 [[packages]]
-name = "@Common NetworkManager submodules"
-
-[[packages]]
-name = "@Container Management"
-
-[[packages]]
-name = "@Core"
-
-[[packages]]
-name = "@Guest Desktop Agents"
-
-[[packages]]
-name = "@Hardware Monitoring Utilities"
-
-[[packages]]
-name = "@Hardware Support"
-
-[[packages]]
-name = "@Headless Management"
-
-[[packages]]
 name = "@Internet Browser"
-
-[[packages]]
-name = "@Multimedia"
-
-[[packages]]
-name = "@Printing Client"
-
-[[packages]]
-name = "@Server product core"
-
-[[packages]]
-name = "@Standard"
 
 [customizations]
 
